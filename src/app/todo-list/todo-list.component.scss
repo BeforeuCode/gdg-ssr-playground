@@ -1,0 +1,102 @@
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 2px solid #eeeeee;
+}
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    position: relative;
+    font-size: 24px;
+    background: linear-gradient(25deg, #243f65 , #2d0726 150%);
+    border-bottom: 2px solid #eeeeee;
+    &:last-child {
+      border-bottom: none;
+    }
+    &.editing {
+      border-bottom: none;
+      padding: 0;
+      .edit {
+        display: block;
+        width: 506px;
+        padding: 12px 16px;
+        margin: 0 0 0 43px;
+      }
+      .view {
+        display: none;
+      }
+      &:last-child {
+        margin-bottom: -1px;
+      }
+    }
+    .toggle {
+      text-align: center;
+      width: 40px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0 auto 5px;
+
+      &:after {
+        content: url(../../assets/circle.svg);
+      }
+      &:checked {
+        &:after {
+          content: url(../../assets/circle-checked.svg);
+        }
+      }
+    }
+    label {
+      word-break: break-all;
+      padding: 15px 60px 15px 15px;
+      margin-left: 41px;
+      display: block;
+      line-height: 1.2;
+      transition: color 0.4s;
+    }
+    &.completed {
+      label {
+        color: rgba(151, 151, 151, 0.65);
+        text-decoration: line-through;
+      }
+    }
+    .destroy {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+      margin: auto 0;
+      font-size: 30px;
+      color: #eeeeee;
+      margin-bottom: 11px;
+      transition: color 0.2s ease-out;
+      &:hover {
+        color: #af1511;
+      }
+      &:after {
+        content: '×';
+      }
+    }
+    &:hover {
+      .destroy {
+        display: block;
+      }
+    }
+    .edit {
+      display: none;
+    }
+  }
+}

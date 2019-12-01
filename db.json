@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "Watch memes all day long 🤡",
+      "complete": false,
+      "id": 0
+    },
+    {
+      "title": "Push to prod on Friday",
+      "complete": true,
+      "id": 1
+    },
+    {
+      "title": "Repeat API Calls",
+      "complete": false,
+      "id": 2
+    }
+  ]
+}
